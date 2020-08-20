@@ -1,0 +1,74 @@
+let open_catalog = document.getElementById("open-catalog");
+
+open_catalog.addEventListener("click", function (event) {
+    event.preventDefault();
+    let menu = document.getElementsByClassName("catalog-dropdown")[0];
+    console.log(menu.classList);
+    menu.classList.toggle("hidden");
+    console.log(menu.classList);
+
+});
+
+
+let slide_index = 0;
+let slides = document.getElementsByClassName("slide-popular");
+let timer;
+showSlides(slide_index);
+
+// Thumbnail image controls
+function currentSlide(n) {
+    slide_index = n;
+    clearTimeout(timer);
+    showSlides(slide_index);
+}
+
+function showSlides(slide_index) {
+
+    for (let i=0; i < slides.length; i++){
+        if (!slides[i].classList.contains("hidden")) {
+            slides[i].classList.add("hidden")
+        }
+    }
+
+    if (slide_index >= slides.length) {
+        slide_index = 0;
+    }
+    slides[slide_index].classList.toggle("hidden");
+    slide_index += 1;
+    timer = setTimeout(showSlides, 5000, slide_index)
+}
+
+
+let slides_condition = document.getElementsByClassName("slide-conditions");
+let slides_condition_buttons = document.getElementsByClassName("list-conditions-link");
+
+function showSlideCondition(n) {
+    for (let i=0; i < slides_condition.length; i++){
+        if (!slides_condition[i].classList.contains("hidden")) {
+            slides_condition[i].classList.add("hidden")
+        }
+    }
+
+    for (let i=0; i < slides_condition_buttons.length; i++){
+        slides_condition_buttons[i].classList.remove("active");
+        slides_condition_buttons[i].classList.add("link-line")
+    }
+
+    slides_condition[n].classList.toggle("hidden");
+    slides_condition_buttons[n].classList.remove("link-line");
+    slides_condition_buttons[n].classList.add("active")
+}
+
+let write_us_close = document.getElementById("write-btn-close");
+let write_us_open = document.getElementById("write-btn-open");
+let write_us = document.getElementById("write-us");
+
+write_us_close.addEventListener("click", function (event) {
+    event.preventDefault();
+    write_us.classList.toggle("hidden")
+});
+
+write_us_open.addEventListener("click", function (event) {
+    event.preventDefault();
+    write_us.classList.toggle("hidden")
+});
