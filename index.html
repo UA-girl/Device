@@ -18,52 +18,59 @@
                     <input type="search" class="search-form--input" placeholder="Поиск по сайту" id="search">
                     <button type="submit" class="btn search-form--btn">Найти</button>
                 </form>
-                <ul class="navigation catalog">
-                    <li class="navigation-item--main">
+                <div class="navigation catalog">
+                    <div class="navigation-item--main">
                         <a href="" class="navigation-link navigation-link--main">Каталог товаров
                             <button class="catalog-btn" id="open-catalog" type="button"></button>
                         </a>
+                        <div class="catalog-dropdown hidden">
+                            <ul>
 
-                        <ul class="catalog-dropdown hidden">
-                            <li class="navigation-item">
-                                <a href="#" class="navigation-link">
-                                    Виртуальная реальность
-                                </a>
-                            </li>
-                            <li class="navigation-item">
-                                <a href="#" class="navigation-link">
-                                    Фитнес-браслеты
-                                </a>
-                            </li>
-                            <li class="navigation-item">
-                                <a href="#" class="navigation-link">
-                                    Квадрокоптеры
-                                </a>
-                            </li>
-                            <li class="navigation-item">
-                                <a href="#" class="navigation-link">
-                                    Моноподы для селфи
-                                </a>
-                            </li>
-                            <li class="navigation-item">
-                                <a href="#" class="navigation-link">
-                                    Умные часы
-                                </a>
-                            </li>
-                            <li class="navigation-item">
-                                <a href="#" class="navigation-link">
-                                    Экшн-камеры
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                                <li class="navigation-item">
+                                    <a href="#" class="navigation-link">
+                                        Виртуальная реальность
+                                    </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a href="#" class="navigation-link">
+                                        Фитнес-браслеты
+                                    </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a href="#" class="navigation-link">
+                                        Квадрокоптеры
+                                    </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a href="monopads.html" class="navigation-link">
+                                        Моноподы для селфи
+                                    </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a href="#" class="navigation-link">
+                                        Умные часы
+                                    </a>
+                                </li>
+                                <li class="navigation-item">
+                                    <a href="#" class="navigation-link">
+                                        Экшн-камеры
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="header-right">
                 <ul class="navigation">
                     <li class="navigation-item navigation-item--enter">
                         <a href="#" class="navigation-link">
                             Войти
+                        </a>
+                    </li>
+                    <li class="navigation-item navigation-item--exit hidden">
+                        <a href="#" class="navigation-link">
+                            Выйти
                         </a>
                     </li>
                     <li class="navigation-item navigation-item--compare">
@@ -330,7 +337,7 @@
         <div class="line line-black"></div>
         <h1>О нас</h1>
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-<br>
+        <br>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
             компаниями:</p>
         <ul>
@@ -360,6 +367,11 @@
                 <li class="navigation-item navigation-item--enter">
                     <a href="#" class="navigation-link">
                         Войти
+                    </a>
+                </li>
+                <li class="navigation-item navigation-item--exit hidden">
+                    <a href="#" class="navigation-link">
+                        Выйти
                     </a>
                 </li>
                 <li class="navigation-item navigation-item--compare">
@@ -419,19 +431,19 @@
 </footer>
 <div class="form-wrapper hidden" id="write-us">
     <div>
-    <button class="btn btn-close" type="button" id="write-btn-close"></button>
-    <form class="form" action="#" method="post">
-        <label class="label">Ваше имя:
-            <input type="text" class="input-name" placeholder="Имя Фамилия">
-        </label>
-        <label class="label">Ваш e-mail:
-            <input type="email" class="input-email" placeholder="email@example.com">
-        </label>
-        <label class="label">Текст письма:
-            <textarea class="input-text" placeholder="В свободной форме"></textarea>
-        </label>
-        <button class="btn link-line" type="submit">Отправить</button>
-    </form>
+        <button class="btn btn-close" type="button" id="write-btn-close"></button>
+        <form class="form" action="#" method="post">
+            <label class="label">Ваше имя:
+                <input type="text" class="input-name" placeholder="Имя Фамилия">
+            </label>
+            <label class="label">Ваш e-mail:
+                <input type="email" class="input-email" placeholder="email@example.com">
+            </label>
+            <label class="label">Текст письма:
+                <textarea class="input-text" placeholder="В свободной форме"></textarea>
+            </label>
+            <button class="btn link-line" type="submit">Отправить</button>
+        </form>
     </div>
 </div>
 
